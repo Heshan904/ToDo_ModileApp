@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ToDo</string>
+    <string name="edit_task">Edit task</string>
+    <string name="delete_task">Delete task</string>
+    <string name="no_tasks_yet">No tasks yet. Tap + to add one.</string>
+    <string name="add_task">Add task</string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="default_web_client_id">808771718243-kr531l1j80j6g7ogpijcgtnovuvq6h5n.apps.googleusercontent.com</string>
+    <string name="back">Back</string>
+    <string name="dev_info_photo">Developer photo</string>
+    <string name="dev_info_name">Heshan Hasitha</string>
+    <string name="dev_info_email">2023t01886@stu.cmb.ac.lk</string>
+    <string name="dev_info_phone">+9470 291 3904</string>
+</resources>

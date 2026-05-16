@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@color/white" android:paddingTop="32dp" android:paddingBottom="24dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+
+        <TextView
+            android:id="@+id/tvLoginTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="@color/green"
+            android:textSize="56sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="40dp" />
+
+        <com.google.android.material.card.MaterialCardView android:id="@+id/loginCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:padding="24dp" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="10dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvLoginTitle">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="30px">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="sans-serif-medium" android:text="Email" android:textColor="#333333" android:textSize="14sp" />
+
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Enter your email" app:boxBackgroundMode="outline" app:boxCornerRadiusBottomEnd="14dp" app:boxCornerRadiusBottomStart="14dp" app:boxCornerRadiusTopEnd="14dp" app:boxCornerRadiusTopStart="14dp">
+
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="56dp" android:inputType="textEmailAddress" android:paddingStart="16dp" android:paddingEnd="16dp" android:textColor="#000000" android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:fontFamily="sans-serif-medium" android:text="Password" android:textColor="#333333" android:textSize="14sp" />
+
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Enter your password" app:boxBackgroundMode="outline" app:boxCornerRadiusBottomEnd="14dp" app:boxCornerRadiusBottomStart="14dp" app:boxCornerRadiusTopEnd="14dp" app:boxCornerRadiusTopStart="14dp">
+
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPassword" android:layout_width="match_parent" android:layout_height="56dp" android:inputType="textPassword" android:paddingStart="16dp" android:paddingEnd="16dp" android:textColor="#000000" android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnSignIn" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="24dp" android:fontFamily="sans-serif-medium" android:text="Sign In" android:textAllCaps="false" android:textColor="@color/dark_green" android:textSize="16sp" app:backgroundTint="@color/green" app:cornerRadius="18dp" />
+
+                <TextView android:id="@+id/tvForgotPassword" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:fontFamily="sans-serif-medium" android:text="Forgot password?" android:textColor="@color/green" android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout android:id="@+id/registerRow" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:orientation="horizontal" android:gravity="center" app:layout_constraintTop_toBottomOf="@id/loginCard" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Don't have an account?" android:textColor="#444444" android:textSize="14sp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/RegisterLink" android:layout_marginStart="4dp" android:text="Register." android:textColor="@color/green" android:textStyle="bold" android:textSize="14sp" />
+        </LinearLayout>
+
+        <View android:layout_width="250dp" android:layout_height="3dp" android:layout_marginTop="10dp" android:background="@color/green" app:layout_constraintTop_toBottomOf="@id/registerRow" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView android:id="@+id/tvSocialLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="Sign Up With" android:textColor="#444444" android:textSize="14sp" android:fontFamily="sans-serif-medium" app:layout_constraintTop_toBottomOf="@id/registerRow" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout android:id="@+id/googleButtonRow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="horizontal" android:gravity="center_vertical" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvSocialLabel">
+
+            <FrameLayout android:id="@+id/btnGoogleSignIn" android:layout_width="100dp" android:layout_height="100dp" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackgroundBorderless">
+
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:padding="12dp" android:scaleType="centerInside" android:src="@drawable/google" android:contentDescription="Google sign in" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "808771718243",
+    "firebase_url": "https://to-do-list-application-ff065-default-rtdb.firebaseio.com",
+    "project_id": "to-do-list-application-ff065",
+    "storage_bucket": "to-do-list-application-ff065.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808771718243:android:7b71cfaf6cc488c6ac3c56",
+        "android_client_info": {
+          "package_name": "com.heshan.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808771718243-kr531l1j80j6g7ogpijcgtnovuvq6h5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJOs4LHmkYjrXC_DKmLnes4YhsNK0YgrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808771718243-kr531l1j80j6g7ogpijcgtnovuvq6h5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

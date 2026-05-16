@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/white" tools:context=".home">
+
+    <View android:id="@+id/topGreenBar" android:layout_width="match_parent" android:layout_height="40dp" android:background="@color/mint_nav" app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView android:id="@+id/addTaskFabCard" android:layout_width="52dp" android:layout_height="52dp" android:layout_marginTop="24dp" android:layout_marginEnd="20dp" android:clickable="true" android:focusable="true" android:foreground="?attr/selectableItemBackground" app:cardBackgroundColor="@color/mint_nav" app:cardCornerRadius="14dp" app:cardElevation="6dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/topGreenBar">
+
+        <ImageView android:id="@+id/addTaskFab" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@string/add_task" android:padding="14dp" android:src="@drawable/ic_add" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/tasksRecycler" android:layout_width="0dp" android:layout_height="0dp" android:clipToPadding="false" android:paddingStart="16dp" android:paddingTop="16dp" android:paddingEnd="16dp" android:paddingBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/footerBar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/addTaskFabCard" tools:listitem="@layout/item_task" />
+
+    <TextView android:id="@+id/emptyTasksHint" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center" android:padding="24dp" android:text="@string/no_tasks_yet" android:textColor="@color/text_secondary" android:textSize="15sp" android:visibility="gone" app:layout_constraintBottom_toTopOf="@+id/footerBar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/addTaskFabCard" />
+
+    <include android:id="@+id/footerBar" layout="@layout/footer_bar" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

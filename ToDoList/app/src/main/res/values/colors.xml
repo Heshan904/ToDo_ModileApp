@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#38FF52</color>
+    <color name="dark_green">#1B5E20</color>
+    <color name="forest_green">#0D4F0D</color>
+    <color name="mint_nav">#A7FF83</color>
+    <color name="mint_surface">#E8F5E9</color>
+    <color name="mint_row">#DCF8D4</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_tertiary">#9E9E9E</color>
+    <color name="input_border">#D1D1D1</color>
+    <color name="logout_red">#FF3B30</color>
+    <color name="switch_track">#B39DDB</color>
+</resources>

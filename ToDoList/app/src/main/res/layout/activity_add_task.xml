@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/white" tools:context=".AddTaskActivity">
+
+    <View android:id="@+id/topGreenBar" android:layout_width="match_parent" android:layout_height="40dp" android:background="@color/mint_nav" app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView android:id="@+id/addTaskCard" android:layout_width="0dp" android:layout_height="0dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="24dp" android:layout_marginBottom="12dp" app:cardCornerRadius="28dp" app:strokeColor="#4CAF50" app:strokeWidth="2dp" app:cardUseCompatPadding="true" app:layout_constraintBottom_toTopOf="@+id/footerBar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/topGreenBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent" android:padding="20dp">
+
+            <ImageView android:id="@+id/btnBack" android:layout_width="32dp" android:layout_height="32dp" android:contentDescription="Back" android:padding="4dp" android:src="@drawable/ic_arrow_back" app:tint="#2E7D32" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView android:id="@+id/tvAddTaskTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="Add Task" android:textColor="#222222" android:textSize="22sp" android:textStyle="bold" app:layout_constraintBaseline_toBaselineOf="@+id/btnBack" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/btnBack" />
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/titleLayout" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:backgroundTintMode="src_atop" android:hint="Title" app:endIconMode="clear_text" app:boxBackgroundColor="#E8F5E9" app:boxCornerRadiusBottomEnd="18dp" app:boxCornerRadiusBottomStart="18dp" app:boxCornerRadiusTopEnd="18dp" app:boxCornerRadiusTopStart="18dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/btnBack">
+
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/inputTitle" android:layout_width="match_parent" android:layout_height="48dp" android:background="@android:color/transparent" android:inputType="textCapSentences" android:textColor="#111111" android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/descriptionLayout" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:hint="Des." app:endIconMode="clear_text" app:boxBackgroundColor="#E8F5E9" app:boxCornerRadiusBottomEnd="18dp" app:boxCornerRadiusBottomStart="18dp" app:boxCornerRadiusTopEnd="18dp" app:boxCornerRadiusTopStart="18dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/titleLayout">
+
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/inputDescription" android:layout_width="match_parent" android:layout_height="120dp" android:background="@android:color/transparent" android:gravity="top" android:inputType="textMultiLine" android:minLines="4" android:textColor="#111111" android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:id="@+id/tvDateLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Date" android:textColor="#2E7D32" android:textSize="14sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/descriptionLayout" />
+
+            <Spinner android:id="@+id/spinnerDay" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginTop="10dp" android:backgroundTint="#A5D6A7" android:padding="8dp" app:layout_constraintEnd_toStartOf="@+id/spinnerMonth" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/tvDateLabel" app:layout_constraintWidth_percent="0.48" />
+
+            <Spinner android:id="@+id/spinnerMonth" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginTop="10dp" android:backgroundTint="#A5D6A7" android:padding="8dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/spinnerDay" app:layout_constraintTop_toBottomOf="@+id/tvDateLabel" app:layout_constraintWidth_percent="0.48" />
+
+            <com.google.android.material.card.MaterialCardView android:id="@+id/timePickerCard" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:layout_marginBottom="18dp" app:cardBackgroundColor="#E8F5E9" app:cardCornerRadius="18dp" app:cardElevation="0dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/spinnerMonth">
+
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="18dp">
+
+                    <TextView android:id="@+id/tvTimeLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enter time" android:textColor="#2E7D32" android:textSize="16sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText android:id="@+id/inputHour" android:layout_width="65dp" android:layout_height="70dp" android:layout_marginTop="18dp" android:background="#C8E6C9" android:gravity="center" android:inputType="number" android:padding="8dp" android:text="08" android:textColor="#1B5E20" android:textSize="28sp" app:layout_constraintEnd_toStartOf="@+id/textColon" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/tvTimeLabel" app:layout_constraintWidth_percent="0.25" />
+
+                    <TextView android:id="@+id/textColon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:text=":" android:textColor="#1B5E20" android:textSize="36sp" app:layout_constraintBottom_toBottomOf="@+id/inputHour" app:layout_constraintStart_toEndOf="@+id/inputHour" app:layout_constraintTop_toTopOf="@+id/inputHour" />
+
+                    <EditText android:id="@+id/inputMinute" android:layout_width="60dp" android:layout_height="69dp" android:layout_marginTop="18dp" android:background="#C8E6C9" android:gravity="center" android:inputType="number" android:padding="8dp" android:text="00" android:textColor="#1B5E20" android:textSize="28sp" app:layout_constraintEnd_toStartOf="@+id/buttonAm" app:layout_constraintStart_toEndOf="@+id/textColon" app:layout_constraintTop_toBottomOf="@+id/tvTimeLabel" app:layout_constraintWidth_percent="0.25" />
+
+                    <com.google.android.material.button.MaterialButton android:id="@+id/buttonAm" android:layout_width="67dp" android:layout_height="60dp" android:layout_marginTop="18dp" android:layout_marginEnd="8dp" android:backgroundTint="#A5D6A7" android:text="AM" android:textAllCaps="false" android:textColor="#1B5E20" app:cornerRadius="14dp" app:layout_constraintBottom_toBottomOf="@+id/inputMinute" app:layout_constraintEnd_toStartOf="@+id/buttonPm" app:layout_constraintStart_toEndOf="@+id/inputMinute" app:layout_constraintTop_toTopOf="@+id/inputMinute" app:layout_constraintWidth_percent="0.22" />
+
+                    <com.google.android.material.button.MaterialButton android:id="@+id/buttonPm" android:layout_width="66dp" android:layout_height="59dp" android:layout_marginTop="18dp" android:backgroundTint="#E0E0E0" android:text="PM" android:textAllCaps="false" android:textColor="#424242" app:cornerRadius="14dp" app:layout_constraintBottom_toBottomOf="@+id/inputMinute" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/buttonAm" app:layout_constraintTop_toTopOf="@+id/inputMinute" app:layout_constraintVertical_bias="0.619" app:layout_constraintWidth_percent="0.22" />
+
+                    <TextView android:id="@+id/tvHourLabel" android:layout_width="33dp" android:layout_height="15dp" android:layout_marginStart="16dp" android:layout_marginTop="4dp" android:text="Hour" android:textColor="#4E342E" android:textSize="12sp" app:layout_constraintStart_toStartOf="@+id/inputHour" app:layout_constraintTop_toBottomOf="@+id/inputHour" />
+
+                    <TextView android:id="@+id/tvMinuteLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4dp" android:layout_marginTop="4dp" android:text="Minute" android:textColor="#4E342E" android:textSize="12sp" app:layout_constraintStart_toStartOf="@+id/inputMinute" app:layout_constraintTop_toBottomOf="@+id/inputMinute" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/buttonSave" android:layout_width="0dp" android:layout_height="56dp" android:layout_marginTop="8dp" android:backgroundTint="#4CAF50" android:text="Save" android:textAllCaps="false" android:textColor="#FFFFFF" app:cornerRadius="18dp" app:layout_constraintEnd_toStartOf="@+id/buttonCancel" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/timePickerCard" app:layout_constraintWidth_percent="0.48" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/buttonCancel" android:layout_width="0dp" android:layout_height="56dp" android:layout_marginTop="8dp" android:backgroundTint="#F44336" android:text="Cancel" android:textAllCaps="false" android:textColor="#FFFFFF" app:cornerRadius="18dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/buttonSave" app:layout_constraintTop_toBottomOf="@+id/timePickerCard" app:layout_constraintWidth_percent="0.48" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <include android:id="@+id/footerBar" layout="@layout/footer_bar" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
